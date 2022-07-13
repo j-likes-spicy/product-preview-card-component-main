@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --color-white: #ffffff;
+  --color-cream: #f2eae2;
+  --color-green-metal: #6c7289;
+  --color-green-aquamarine: #3d8168;
+  --color-green-aquamarine-hover: #1a4032;
+  --color-gunmetal: #1c232b;
+}
+
+body {
+  background: var(--color-cream);
+  font-family: "Montserrat", sans-serif;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* Layout Controls - Desktop/Standard Viewports */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+}
+
+.card {
+  width: 37.5rem;
+  height: 28.125rem;
+  display: flex;
+}
+
+.card__image,
+.card__content {
+  width: 18.75rem;
+  height: 28.125rem;
+}
+
+.card__pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center space-evenly;
+  margin-bottom: 1.875rem;
+}
+
+/* Content */
+.card__content {
+  background: var(--color-white);
+  border-top-right-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  padding: 2rem;
+}
+
+.card__image {
+  border-top-left-radius: 0.625rem;
+  border-bottom-left-radius: 0.625rem;
+  background: url(./images/image-product-desktop.jpg);
+  background-size: cover;
+}
+
+.card__button {
+  width: 14.75rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: var(--color-green-aquamarine);
+  align-items: center;
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  background: var(--color-green-aquamarine-hover);
+}
+
+footer {
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 0 auto 2rem auto;
+}
+
+/* Typography */
+.card__header--main,
+.card__price--current {
+  font-family: "Fraunces", serif;
+}
+
+.card__header--small {
+  text-transform: uppercase;
+  letter-spacing: 0.3125rem;
+  font-weight: normal;
+  font-size: 0.75rem;
+  color: var(--color-green-metal);
+  margin-bottom: 1.25rem;
+}
+
+.card__header--main {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: var(--color-gunmetal);
+  margin-bottom: 1.5rem;
+}
+
+.card__paragraph {
+  color: var(--color-green-metal);
+  font-size: 0.875rem;
+  line-height: 1.4375rem;
+  font-weight: 500;
+  margin-bottom: 1.8125rem;
+}
+
+.card__price--current {
+  font-size: 2rem;
+  color: var(--color-green-aquamarine);
+  margin-right: 1.5rem;
+}
+
+.card__price--markdown {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-decoration: line-through;
+  color: var(--color-green-metal);
+}
+.footer__link {
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: var(--color-green-aquamarine);
+}
+
+/* Mobile viewport */
+@media screen and (max-width: 421px) {
+  /* Layout Controls - Mobile */
+  .card {
+    width: 21.4375rem;
+    min-height: 38.1875rem;
+    flex-direction: column;
+  }
+
+  .card__image {
+    width: 21.4375rem;
+    height: 15rem;
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    border-bottom-left-radius: 0;
+    background-size: cover;
+  }
+
+  .card__content {
+    width: 21.4375rem;
+    height: 23.1875rem;
+    padding: 1.5rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.625rem;
+  }
+
+  .card__button {
+    width: 18.4375rem;
+  }
+
+  /* Typography */
+  .card__header--small {
+    margin-bottom: 0.75rem;
+  }
+
+  .card__header--main {
+    margin-bottom: 1rem;
+  }
+
+  .card__paragraph {
+    margin-bottom: 1.5rem;
+  }
+
+  .card__pricing {
+    margin-bottom: 1.25rem;
+  }
+}
